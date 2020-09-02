@@ -1,4 +1,4 @@
-HOCO	gene_name
+HOCO	gene_symbol
 AHR	Ahr
 AIRE	Aire
 ALX1	Alx1

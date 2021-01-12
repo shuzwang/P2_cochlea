@@ -25,4 +25,6 @@ snaptools snap-pre --input-file=/P2_ATAC_ApexBase_aggr_2872/outs/fragments_sort.
 ```
 snaptools snap-add-bmat --snap-file=atac_peak_cell_20000.snap --bin-size-lis 5000 --verbose=True
 ```
-Then we followed the SnapATAC pipeline https://github.com/r3fang/SnapATAC. We
+Then we followed the SnapATAC pipeline https://github.com/r3fang/SnapATAC. We identified the scATAC-seq clusters, annotated the clusters based on Jaccard similarity matrix, called peaks for each clusters, and identified differentially accessible regions. 
+
+

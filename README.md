@@ -43,7 +43,7 @@ After we run `ataqv --peak-file` for each cluster, we run:
 mkarv 6_sample cluster1.ataqv.json.gz cluster2.ataqv.json.gz cluster3.ataqv.json.gz cluster4.ataqv.json.gz cluster5.ataqv.json.gz cluster6.ataqv.json.gz
 ```
 
-
+* chromVAR pipeline: chromVAR pipeline is to analyze the scATAC-seq dataset. chromVAR takes as inputs aligned fragments from scATAC-seq as well as genomic annotations such as motif positions. Here we used HOCOMOCOv10 motif database. chromVAR computes for each annotation and each cell a bias corrected “deviation” in accessibility from the expected accessibility based on the average of all the cells or samples. Finally, we calculated the z-scores for each TF-motif per cell to represent the TF activity for that cell. We followed the pipeline from https://github.com/GreenleafLab/chromVAR. 
 
 
 

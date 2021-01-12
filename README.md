@@ -55,21 +55,23 @@ We created HOCOMOCOv10 motif PWM for further analysis using `python createPwm.py
 python createPwm.py -f jaspar-2016 -i hocomoco_v10_mouse_motif.txt  -o hocomoco_v10_mouse_motif
 ```
 
-First, we called footprints for hair cell cluster and supporting cell cluster separately:
+First, we called footprints `rgt-hint footprinting` for hair cell cluster and supporting cell cluster separately:
 ```
 rgt-hint footprinting --atac-seq --paired-end --organism=mm10 ~/Desktop/P2_analysis/P2_bam_files/P2_scATACseq_cluster1.bam ~/Desktop/P2_analysis/P2_scATACseq_cluster_peaks/P2_scATACseq_cluster1_peaks.narrowPeak
-
 rgt-hint footprinting --atac-seq --paired-end --organism=mm10 ~/Desktop/P2_analysis/P2_bam_files/P2_scATACseq_cluster2.bam ~/Desktop/P2_analysis/P2_scATACseq_cluster_peaks/P2_scATACseq_cluster2_peaks.narrowPeak
 ```
 
-We conducted motif matching for footprints for cluster 1 and cluster 2, respectively, using HOCOMOCOv10 motif database:
+Secondly, we conducted motif matching `rgt-motifanalysis matching` for footprints for cluster 1 and cluster 2, respectively, using HOCOMOCOv10 motif database:
 ```
 rgt-motifanalysis matching --motif-dbs ~/rgtdata/motifs/hocomoco_v10_mouse_motif/ --organism=mm10 --input-files P2_cluster1_footprints.bed
 rgt-motifanalysis matching --motif-dbs ~/rgtdata/motifs/hocomoco_v10_mouse_motif/ --organism=mm10 --input-files P2_cluster2_footprints.bed
 ```
 
-
-
+Finally, we used HINT-ATAC to generate average chromatin accessibility profiles `rgt-hint differential ` around binding sites of particular TF. Additionally, by comparing the cleavage profiles from two scATAC-seq clusters, we can get insights on changes in binding in two cell types.
+```
+rgt-hint differential --organism=mm10 --bc --nc 2 --mpbs-files=P2_cluster1_hocomoco_v10_match/P2_cluster1_footprints_mpbs.bed,P2_cluster2_hocomoco_v10_match/P2_cluster2_footprints_mpbs.bed 
+--reads-files=P2_scATACseq_cluster1.bam,P2_scATACseq_cluster2.bam --conditions=cluster1,cluster2
+```
 
 
 

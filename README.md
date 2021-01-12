@@ -22,3 +22,6 @@ snaptools snap-pre --input-file=/P2_ATAC_ApexBase_aggr_2872/outs/fragments_sort.
 --max-num=20000 --min-cov=100 --verbose=True 
 ```
 
+```
+snaptools snap-add-bmat --snap-file=atac_peak_cell_20000.snap --bin-size-lis 5000 --verbose=True
+```

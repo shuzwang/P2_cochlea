@@ -29,7 +29,20 @@ Then we followed the SnapATAC pipeline https://github.com/r3fang/SnapATAC. We id
 
 * LIGER pipeline: Liger pipeline is to align and integrate scRNA-seq and scATAC-seq datasets. We co-embedded these two datasets onto the same UMAP and validate our Jaccard similarity-based annotation approach. We followed the documentation of LIGER from http://htmlpreview.github.io/?https://github.com/welch-lab/liger/blob/master/vignettes/Integrating_scRNA_and_scATAC_data.html. 
 
-* ataqv pipeline: 
+* ataqv pipeline: ataqv pipeline is to measure and compare ATAC-seq results. We conducted peak calling in SnapATAC for each individual cluster and extracted corresponding bam files to run ataqv. We followed the pipeline from https://github.com/ParkerLab/ataqv. For each cluster, we run `ataqv --peak-file` :
+
+```
+ataqv --peak-file /atacqv_results/P2_scATACseq_cluster1_peaks.narrowPeak --name cluster1 --metrics-file /atacqv_results/cluster1.ataqv.json.gz 
+--excluded-region-file /atacqv_results/mm10.blacklist.bed.gz --tss-file /atacqv_results/ref_genes_R_package_4_columns.bed 
+--tss-extension 2000bp --ignore-read-groups mouse /bam_files/P2_scATACseq_cluster1.bam > /atacqv_results/cluster1.ataqv.out
+```
+
+After we run `ataqv --peak-file` for each cluster, we run:
+
+```
+mkarv 6_sample cluster1.ataqv.json.gz cluster2.ataqv.json.gz cluster3.ataqv.json.gz cluster4.ataqv.json.gz cluster5.ataqv.json.gz cluster6.ataqv.json.gz
+```
+
 
 
 

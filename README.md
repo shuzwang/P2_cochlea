@@ -12,4 +12,4 @@ Analysis Pipelines
 ============================
 
 Here we include analysis pipeline code for our manuscript. 
-* Seurat pipeline: Seurat pipeline is to analyze P2 scRNA-seq dataset. We identified clusters, annotated cell type for each cluster using marker genes, determined differentially expressed genes across cell types, and identified differentially expressed genes between library IDs (Apical VS Basal cells). We followed the documents from https://satijalab.org/seurat/
+* Seurat pipeline: Seurat pipeline is to analyze P2 scRNA-seq dataset. We identified clusters, annotated cell type for each cluster using marker genes, determined differentially expressed genes across cell types, and identified differentially expressed genes between library IDs (Apical VS Basal cells). We followed the documentations from https://satijalab.org/seurat/

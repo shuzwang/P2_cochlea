@@ -55,6 +55,18 @@ We created HOCOMOCOv10 motif PWM for further analysis using `python createPwm.py
 python createPwm.py -f jaspar-2016 -i hocomoco_v10_mouse_motif.txt  -o hocomoco_v10_mouse_motif
 ```
 
+First, we called footprints for hair cell cluster and supporting cell cluster separately:
+```
+rgt-hint footprinting --atac-seq --paired-end --organism=mm10 ~/Desktop/P2_analysis/P2_bam_files/P2_scATACseq_cluster1.bam ~/Desktop/P2_analysis/P2_scATACseq_cluster_peaks/P2_scATACseq_cluster1_peaks.narrowPeak
+
+rgt-hint footprinting --atac-seq --paired-end --organism=mm10 ~/Desktop/P2_analysis/P2_bam_files/P2_scATACseq_cluster2.bam ~/Desktop/P2_analysis/P2_scATACseq_cluster_peaks/P2_scATACseq_cluster2_peaks.narrowPeak
+```
+
+We conducted motif matching for footprints for cluster 1 and cluster 2, respectively, using HOCOMOCOv10 motif database:
+```
+rgt-motifanalysis matching --motif-dbs ~/rgtdata/motifs/hocomoco_v10_mouse_motif/ --organism=mm10 --input-files P2_cluster1_footprints.bed
+rgt-motifanalysis matching --motif-dbs ~/rgtdata/motifs/hocomoco_v10_mouse_motif/ --organism=mm10 --input-files P2_cluster2_footprints.bed
+```
 
 
 

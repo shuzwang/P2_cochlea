@@ -13,3 +13,4 @@ Analysis Pipelines
 
 Here we include analysis pipeline code for our manuscript. 
 * Seurat pipeline: Seurat pipeline is to analyze P2 scRNA-seq dataset. We identified clusters, annotated cell type for each cluster using marker genes, determined differentially expressed genes across cell types, and identified differentially expressed genes between library IDs (Apical VS Basal cells). We followed the documentations from https://satijalab.org/seurat/
+* SnapATAC pipeline: SnapATAC pipeline is to analyze P2 scATAC-seq dataset. We started with Snaptools, which is a python module for pre-processing and working with snap files. We followed the documentation from https://github.com/r3fang/SnapTools. 

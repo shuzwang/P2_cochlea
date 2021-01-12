@@ -15,6 +15,7 @@ Here we include analysis pipeline code for our manuscript.
 * Seurat pipeline: Seurat pipeline is to analyze P2 scRNA-seq dataset. We identified clusters, annotated cell type for each cluster using marker genes, determined differentially expressed genes across cell types, and identified differentially expressed genes between library IDs (Apical VS Basal cells). We followed the documentations from https://satijalab.org/seurat/
 * SnapATAC pipeline: SnapATAC pipeline is to analyze P2 scATAC-seq dataset. We started with Snaptools, which is a python module for pre-processing and working with snap files. We followed the documentation from https://github.com/r3fang/SnapTools. 
 
-```snaptools snap-pre --input-file=/P2_ATAC_ApexBase_aggr_2872/outs/fragments_sort.bed.gz --output-snap=atac_peak_cell_20000.snap --genome-name=mm10 --genome-size=mm10.chrom.sizes --min-mapq=30 --min-flen=50 --max-flen=1000 --keep-chrm=TRUE --keep-single=FALSE --keep-secondary=False --overwrite=True --max-num=20000 --min-cov=100 --verbose=True 
+```
+snaptools snap-pre --input-file=/P2_ATAC_ApexBase_aggr_2872/outs/fragments_sort.bed.gz --output-snap=atac_peak_cell_20000.snap --genome-name=mm10 --genome-size=mm10.chrom.sizes --min-mapq=30 --min-flen=50 --max-flen=1000 --keep-chrm=TRUE --keep-single=FALSE --keep-secondary=False --overwrite=True --max-num=20000 --min-cov=100 --verbose=True 
 ```
 

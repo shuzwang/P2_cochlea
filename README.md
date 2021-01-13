@@ -92,5 +92,20 @@ fimo --text --parse-genomic-coord HOCOMOCOv10_MOUSE_mono_meme_format.meme S100b_
 Additional Analysis
 ============================
 
+Besides the existing packages we used, we also generated some novel functions for our manuscript. 
+
+* Jaccard_matrix.R: Jaccard_matrix.R script includes the functions to annotate differentially accessible regions to genes and generated Jaccard similarity matrix between differentially expressed genes from scRNA-seq data and annotated differentially accessible regions from scATAC-seq data.
+
+* 
+
+
+
+
+
+
+
+
+
+
 
 

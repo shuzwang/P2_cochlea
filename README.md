@@ -1,5 +1,5 @@
 # P2_cochlear
-It contains the code to analyze P2 scRNA-seq and scATAC-seq data. 
+It contains the analytical code to analyze P2 scRNA-seq and scATAC-seq multi-omics datasets. 
 
 
 Abstract
@@ -106,7 +106,9 @@ Supplementary Files
 
 * HOCOMOCO_v10_gene_translation_table.txt: `HOCOMOCO_v10_gene_translation_table.txt` is a tab-delimited file inclduing HOCOMOCO ID on the first column and corresponding gene name on the second column.
 
+* mm10.blacklist.bed.gz: `mm10.blacklist.bed.gz` is a zipped tab-delimited file including the defined ENCODE blacklist in mouse (mm10). The removal of the ENCODE blacklist is an essential quality measure when analyzing functional genomics data. `mm10.blacklist.bed.gz` file was downloaded from https://github.com/Boyle-Lab/Blacklist.
 
+* mm10.chrom.sizes.txt: `mm10.chrom.sizes.txt` is a tab-delimited file inclduing the size of chromosomes in mm10. The file was downloaded from https://hgdownload.soe.ucsc.edu/goldenPath/mm10/bigZips/. 
 
 
 

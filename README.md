@@ -94,9 +94,9 @@ Additional Analysis
 
 Besides the existing packages we used, we also generated some novel functions for our manuscript. 
 
-* Jaccard_matrix.R: Jaccard_matrix.R script includes the functions to annotate differentially accessible regions to genes and generated Jaccard similarity matrix between differentially expressed genes from scRNA-seq data and annotated differentially accessible regions from scATAC-seq data.
+* Jaccard_matrix.R: `Jaccard_matrix.R` script includes the functions to annotate differentially accessible regions to genes and generated Jaccard similarity matrix between differentially expressed genes from scRNA-seq data and annotated differentially accessible regions from scATAC-seq data.
 
-* 
+* TF_mode_classification.R : `TF_mode_classification.R` script includes the functions to identify differentially expressed TF genes and identify differentially accessible TF motifs between two populations (HC VS SC). Such functions provide three different statistical tests for users to choose like median value comparison, Student t-test, and Wilcoxon rank sum test to compare two populations. Also, the script includes the function to classify the TF mode into activators and repressors based on relations between gene expression and chromatin accessiblity. 
 
 
 

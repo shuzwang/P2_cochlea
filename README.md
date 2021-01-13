@@ -73,6 +73,7 @@ rgt-hint differential --organism=mm10 --bc --nc 2 --mpbs-files=P2_cluster1_hocom
 --reads-files=P2_scATACseq_cluster1.bam,P2_scATACseq_cluster2.bam --conditions=cluster1,cluster2
 ```
 
+* CellTrails pipeline: CellTrails pipeline is to infer trajectory using TF-by-cell matrix we calculated from chromVAR. Here we concentrated on hair cells which compose of inner hair cells (IHC) and outer hair cells (OHC). IHCs and OHCs are differentiated from same progenitor cells. We inferred scATAC-seq hair cell trajectory as "Y-shape" using CellTrails. We followed the documentation from https://hellerlab.stanford.edu/celltrails/. 
 
 
 

@@ -101,6 +101,10 @@ Besides the existing packages we used, we also generated some novel functions fo
 
 
 
+Supplementary Files
+============================
+
+* HOCOMOCO_v10_gene_translation_table.txt: `HOCOMOCO_v10_gene_translation_table.txt` is a tab-delimited file inclduing HOCOMOCO ID on the first column and corresponding gene name on the second column.
 
 
 

@@ -27,7 +27,7 @@ snaptools snap-add-bmat --snap-file=atac_peak_cell_20000.snap --bin-size-lis 500
 ```
 Then we followed the SnapATAC pipeline https://github.com/r3fang/SnapATAC. We identified the scATAC-seq clusters, annotated the clusters based on Jaccard similarity matrix, created gene-based annotation, called peaks for each cluster, and identified differentially accessible regions. 
 
-* LIGER pipeline: Liger pipeline is to align and integrate scRNA-seq and scATAC-seq datasets. We co-embedded these two datasets onto the same UMAP and validate our Jaccard similarity-based annotation approach. We followed the documentation of LIGER from http://htmlpreview.github.io/?https://github.com/welch-lab/liger/blob/master/vignettes/Integrating_scRNA_and_scATAC_data.html. 
+* LIGER pipeline: LIGER pipeline is to integrate and align scRNA-seq and scATAC-seq datasets. We co-embedded these two datasets onto the same UMAP and validate our Jaccard similarity-based annotation approach. We followed the documentation of LIGER from http://htmlpreview.github.io/?https://github.com/welch-lab/liger/blob/master/vignettes/Integrating_scRNA_and_scATAC_data.html. 
 
 * ataqv pipeline: ataqv pipeline is to measure and compare ATAC-seq results. We conducted peak calling in SnapATAC for each individual cluster and extracted corresponding bam files to run ataqv. We followed the pipeline from https://github.com/ParkerLab/ataqv. For each cluster, we run `ataqv --peak-file` :
 

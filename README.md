@@ -77,5 +77,9 @@ rgt-hint differential --organism=mm10 --bc --nc 2 --mpbs-files=P2_cluster1_hocom
 
 * diffTF pipeline: diffTF pipeline is to classify TFs into activators and repressors based on TF activities. diffTF is designed for "bulk" RNA-seq and ATAC-seq datasets. The RNA-seq and ATAC-seq samples have to match. To apply diffTF on our single-cell multi-omics data, we ranked the cells for scRAN-seq and scATAC-seq based on 1D spatial map, respectively. Then, we separated the cells into 4 partitions based on the rank and aggregated the cells from the same partition. For scRNA-seq, we aggregated the reads for each partition individually. For scATAC-seq, we created 4 "pseudo-bulk" ATAC-seq datasets and called peaks for each "pseudo-bulk" ATAC-seq dataset. We followed diffTF pipeline from https://difftf.readthedocs.io/en/latest/. 
 
+* Cicero pipeline: Cicero pipeline is to predict cis-regulatory interactions in the genome by examining co-accessibility using scATAC-seq data. 
+
+
+
 
 

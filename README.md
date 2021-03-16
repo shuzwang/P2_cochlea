@@ -1,4 +1,4 @@
-# P2_cochlear
+# P2_cochlea
 It contains the analytical code to analyze P2 scRNA-seq and scATAC-seq multi-omics datasets. 
 
 
